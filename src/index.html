@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>XSpammer</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tailwind.css">
+	<script>
+		let $ = require('jquery');
+		require('@popperjs/core');
+		require('bootstrap');
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<div class="header flex">
+		<h1 class="headertitle my-auto ml-3 font-base text-xl">XSpammer</h1>
+		<button class="minimizebtn secondarybtn btn my-auto ml-auto mr-2 font-base text-xl">
+			<i class="fas fa-compress mr-1"></i>
+			Minimize
+		</button>
+		<button class="closebtn secondarybtn btn my-auto mr-3 font-base text-xl">
+			<i class="fas fa-times mr-1"></i>
+			Close
+		</button>
+	</div>
+	<div class="sidebar">
+		<a class="active">Login</a>
+	</div>
+	<div class="content">
+		<div class="tokendiv">
+			<input type="text" class="tokeninpt form-control dark mb-2" placeholder="Your bots token">
+			<button class="loginbtn primarybtn btn font-base text-xl">
+				<i class="fas fa-sign-in-alt mr-1"></i>
+				Login
+			</button>
+			<button class="createbotbtn secondarybtn btn ml-1 font-base text-xl">
+				<i class="fas fa-info-circle mr-1"></i>
+				How to create a discord bot
+			</button>
+			<p class="tokeninvalidtxt mt-2 bold p-2 rounded-sm hidden" style="background-color: #BE123C;">
+				Token is invalid.
+			</p>
+		</div>
+		<div class="botinfo hidden">
+			<div class="botdiv flex mb-2">
+				<img class="boticon">
+				<div>
+					<h1 class="bottitle text-xl ml-3">Example#1234</h1>
+					<h1 class="text-sm ml-3" style="color: gray;">Created on <span class="botcreateddate">1/1/1970</span>.</h1>
+				</div>
+			</div>
+			<button class="continuebotbtn primarybtn btn font-base text-xl">
+				<i class="fas fa-check mr-1"></i>
+				Continue with this bot
+			</button>
+			<button class="cancelbotbtn secondarybtn btn ml-1 font-base text-xl">
+				<i class="fas fa-times mr-1"></i>
+				Cancel
+			</button>
+		</div>
+		<div class="serverdiv hidden">
+			<select class="serverslist form-select dark mb-2">
+				<option class="selectserver" selected>Select server</option>
+			</select>
+			<button class="continueserverbtn primarybtn btn font-base text-xl" disabled>
+				<i class="fas fa-check mr-1"></i>
+				Continue with selected server
+			</button>
+			<button class="cancelbotbtn secondarybtn btn ml-1 font-base text-xl">
+				<i class="fas fa-times mr-1"></i>
+				Cancel
+			</button>
+		</div>
+	</div>
+</body>
+
+</html>

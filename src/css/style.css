@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  margin: auto;
+  background-color: #111217;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --navbar-height: 4rem;
+}
+
+.header {
+  width: 100%;
+  background-color: #14151b;
+  height: var(--navbar-height);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+.headertitle {
+  user-select: text;
+  -webkit-user-select: text;
+  -webkit-app-region: no-drag;
+}
+
+.primarybtn {
+  height: 2.7rem;
+  font-size: 1rem !important;
+  color: white;
+  background-color: #0d6efd;
+}
+
+.primarybtn:hover {
+  background-color: #015be0;
+  color: white;
+}
+
+.secondarybtn {
+  height: 2.7rem;
+  font-size: 1rem !important;
+  color: #bfc4c9;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  -webkit-app-region: no-drag;
+}
+
+.secondarybtn:hover {
+  color: #bfc4c9;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar {
+  margin-top: var(--navbar-height);
+  height: calc(100% - var(--navbar-height));
+  height: -o-calc(100% - var(--navbar-height));
+  height: -webkit-calc(100% - var(--navbar-height));
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #191a21;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar .active {
+  color: white;
+  background-color: #14151b;
+}
+
+.sidebar .active:hover {
+  cursor: not-allowed;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.content {
+  margin-left: 160px;
+  padding: 1rem;
+}
+
+input.form-control.dark {
+  background-color: #0c0d11 !important;
+  border: none !important;
+  color: white !important;
+}
+
+select.form-select.dark {
+  background-color: #0c0d11 !important;
+  border: none !important;
+  color: white !important;
+}
+
+.botdiv {
+  background-color: #0c0d11;
+  padding: 1rem;
+}
+
+.boticon {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.gradient {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #8a2387 20%,
+    #e94057 40%,
+    #f27121 60%,
+    #8a2387 80%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

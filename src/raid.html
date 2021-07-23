@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>XSpammer</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tailwind.css">
+	<script>
+		let $ = require('jquery');
+		require('@popperjs/core');
+		require('bootstrap');
+	</script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<div class="header flex">
+		<h1 class="headertitle my-auto ml-3 font-base text-xl">XSpammer - <span class="gradient">Loading</span></h1>
+		<button class="backtologinbtn secondarybtn btn my-auto ml-auto mr-2 font-base text-xl">
+			<i class="fas fa-arrow-left mr-1"></i>
+			Go back to login
+		</button>
+		<button class="minimizebtn secondarybtn btn my-auto mr-2 font-base text-xl">
+			<i class="fas fa-compress mr-1"></i>
+			Minimize
+		</button>
+		<button class="closebtn secondarybtn btn my-auto mr-3 font-base text-xl">
+			<i class="fas fa-times mr-1"></i>
+			Close
+		</button>
+	</div>
+	<div class="sidebar hidden">
+		<a href="javascript:void(0)" class="sidebar--item active">Users</a>
+		<a href="javascript:void(0)" class="sidebar--item">Channels</a>
+		<a href="javascript:void(0)" class="sidebar--item">Roles</a>
+		<a href="javascript:void(0)" class="sidebar--item">Server</a>
+	</div>
+	<div class="content hidden">
+		<div class="users">
+			<button class="dmall primarybtn btn font-base text-xl">
+				DM All
+			</button>
+			<button class="dmuser secondarybtn btn font-base text-xl ml-1">
+				DM User
+			</button>
+			</br>
+			<button class="banall primarybtn btn font-base text-xl mt-2">
+				Ban All
+			</button>
+			<button class="banuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Ban User
+			</button>
+			</br>
+			<button class="unbanall primarybtn btn font-base text-xl mt-2">
+				Unban All
+			</button>
+			<button class="unbanuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Unban User
+			</button>
+			</br>
+			<button class="kickall primarybtn btn font-base text-xl mt-2">
+				Kick All
+			</button>
+			<button class="kickuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Kick User
+			</button>
+			</br>
+			<button class="muteall primarybtn btn font-base text-xl mt-2">
+				Mute All
+			</button>
+			<button class="muteuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Mute User
+			</button>
+			</br>
+			<button class="unmuteall primarybtn btn font-base text-xl mt-2">
+				Unmute All
+			</button>
+			<button class="unmuteuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Unmute User
+			</button>
+			</br>
+			<button class="nicknameall primarybtn btn font-base text-xl mt-2">
+				Nickname All
+			</button>
+			<button class="nicknameuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Nickname User
+			</button>
+			</br>
+			<button class="unnicknameall primarybtn btn font-base text-xl mt-2">
+				Unnickname All
+			</button>
+			<button class="unnicknameuser secondarybtn btn font-base text-xl ml-1 mt-2">
+				Unnickname User
+			</button>
+		</div>
+		<div class="server hidden">
+			<button class="changeservername primarybtn btn font-base text-xl">
+				Change Server Name
+			</button>
+			<button class="changeservericon secondarybtn btn font-base text-xl ml-1">
+				Change Server Icon
+			</button>
+		</div>
+		<div class="channels hidden">
+			<button class="deleteall primarybtn btn font-base text-xl">
+				Delete All
+			</button>
+			<button class="deletechannel secondarybtn btn font-base text-xl ml-1">
+				Delete Channel
+			</button>
+			<br />
+			<button class="renameall primarybtn btn font-base text-xl mt-2">
+				Rename All
+			</button>
+			<button class="renamechannel secondarybtn btn font-base text-xl ml-1 mt-2">
+				Rename Channel
+			</button>
+			<br />
+			<button class="cloneall primarybtn btn font-base text-xl mt-2">
+				Clone All
+			</button>
+			<button class="clonechannel secondarybtn btn font-base text-xl ml-1 mt-2">
+				Clone Channel
+			</button>
+			<br />
+			<button class="purgeall primarybtn btn font-base text-xl mt-2">
+				Purge All
+			</button>
+			<button class="purgechannel secondarybtn btn font-base text-xl ml-1 mt-2">
+				Purge Channel
+			</button>
+			<br />
+			<button class="sendmessageall primarybtn btn font-base text-xl mt-2">
+				Send Message All
+			</button>
+			<button class="sendmessagechannel secondarybtn btn font-base text-xl ml-1 mt-2">
+				Send Message Channel
+			</button>
+			<br />
+			<button class="createmultiple primarybtn btn font-base text-xl mt-2">
+				Create Multiple
+			</button>
+			<button class="createchannel secondarybtn btn font-base text-xl ml-1 mt-2">
+				Create Channel
+			</button>
+		</div>
+		<div class="roles hidden">
+			<button class="deleteall primarybtn btn font-base text-xl">
+				Delete All
+			</button>
+			<button class="deleterole secondarybtn btn font-base text-xl ml-1">
+				Delete Role
+			</button>
+			<br />
+			<button class="renameall primarybtn btn font-base text-xl mt-2">
+				Rename All
+			</button>
+			<button class="renamerole secondarybtn btn font-base text-xl ml-1 mt-2">
+				Rename Role
+			</button>
+			<br />
+			<button class="cloneall primarybtn btn font-base text-xl mt-2">
+				Clone All
+			</button>
+			<button class="clonerole secondarybtn btn font-base text-xl ml-1 mt-2">
+				Clone Role
+			</button>
+			<br />
+			<button class="createmultiple primarybtn btn font-base text-xl mt-2">
+				Create Multiple
+			</button>
+			<button class="createrole secondarybtn btn font-base text-xl ml-1 mt-2">
+				Create Role
+			</button>
+		</div>
+	</div>
+</body>
+
+</html>

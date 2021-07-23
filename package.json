@@ -1,0 +1,90 @@
+{
+  "name": "xspammer",
+  "productName": "XSpammer",
+  "version": "1.0.0",
+  "description": "A feature-packed nuke bot with a slick and modern user-interface.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "xspammer",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/img/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/img/icon.ico",
+      "uninstallerIcon": "src/img/icon.ico",
+      "uninstallDisplayName": "XSpammer",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Indxgo Development"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "xspammer"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
+    "buffer-image": "^1.0.0",
+    "buffer-to-arraybuffer": "0.0.6",
+    "discord": "^0.8.2",
+    "discord.js": "^12.5.3",
+    "electron-progressbar": "^2.0.0",
+    "electron-prompt": "^1.6.2",
+    "electron-reload": "^1.5.0",
+    "electron-settings": "^4.0.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "globby": "^11.0.3",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "open": "^8.0.8"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.55",
+    "@electron-forge/maker-deb": "^6.0.0-beta.55",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.55",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.55",
+    "@electron-forge/maker-zip": "^6.0.0-beta.55",
+    "electron-builder": "^22.10.5",
+    "electron": "^12.0.7"
+  }
+}
